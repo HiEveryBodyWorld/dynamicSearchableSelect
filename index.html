@@ -1,0 +1,56 @@
+<!--_meta 作为公共模版分离出去-->
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+
+    <link rel="stylesheet" type="text/css" href="css/dynamicSearchableSelect.css" />
+</head>
+<body>
+<div class="page-container">
+    <form action="" method="post" class="form form-horizontal" id="form-article-add">
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>test名称：</label>
+            <div class="formControls col-xs-8 col-sm-9" style="z-index: 200">
+                <select id="bussinessID" name="bussinessID">
+                    <option selected="selected" value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+
+                </select>
+            </div>
+        </div>
+        <div class="row cl">
+            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>test负责人：</label>
+            <div class="formControls col-xs-8 col-sm-9" style="z-index: 200">
+                <select id="chargePersonsID" name="chargePersonsID" >
+
+                </select>
+            </div>
+        </div>
+    </form>
+</div>
+
+<script type="text/javascript" src="js/jquery/1.9.1/jquery.js"></script>
+<script type="text/javascript" src="js/dynamicSearchableSelect.js"></script>
+
+<script type="text/javascript">
+
+    $(function(){
+
+        $('#bussinessID').searchableSelectSendPost({
+            'url':'http://localhost:8081/sys/commucate/getchargepersons',
+            'targetID':'chargePersonsID',
+            'returnField':['contact','contact2']
+        });
+    });
+
+</script>
+</body>
+</html>
