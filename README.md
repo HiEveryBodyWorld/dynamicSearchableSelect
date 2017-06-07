@@ -3,28 +3,6 @@
 
 
 
- <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>test名称：</label>
-            <div class="formControls col-xs-8 col-sm-9" style="z-index: 200">
-                <select id="bussinessID" name="bussinessID">
-                    <option selected="selected" value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-
-                </select>
-            </div>
-        </div>
-        <div class="row cl">
-            <label class="form-label col-xs-4 col-sm-2"><span class="c-red">*</span>test负责人：</label>
-            <div class="formControls col-xs-8 col-sm-9" style="z-index: 200">
-                <select id="chargePersonsID" name="chargePersonsID" >
-
-                </select>
-            </div>
-        </div>
-
 
 使用方法是
 <script type="text/javascript">
